@@ -41,21 +41,26 @@ node* beg(int val, node* head)
 	newnode->data = val;
 	newnode->link = NULL;
 
+// if list is empty
+	if(head == NULL)
+	{
+		head = newnode;
+		return head;
+	}
+
+// if list is non empty	
 	if(head!= NULL)
 	{
 		node* temp = head;
 		head = newnode;
 		newnode->link = temp;
 	}
-	if(head == NULL)
-	{
-		head = newnode;
-		return head;
-	}		
+			
 
 	return head;
 }
 
+// store at given position
 node* AnyPos(int val, int pos, node* head )
 {
 	node* newnode = new node();
@@ -64,6 +69,7 @@ node* AnyPos(int val, int pos, node* head )
 
 	int count = 0;
 
+// if store at beginning
 	if(pos == 1)
 	{	
 		newnode->link = head;
@@ -71,6 +77,7 @@ node* AnyPos(int val, int pos, node* head )
 		return head;
 	}
 
+// first find nth-1 node 
 	node* temp = head;
 	for(int i=0; i<pos-2; i++)
 	{	
@@ -81,8 +88,13 @@ node* AnyPos(int val, int pos, node* head )
 			return head;
 		}
 	}
+
+// link newnode to that node which is linked by nth-1 node
 	newnode->link = temp->link;
+
+// link nth-1 node to newnode then newnode will become nth node
 	temp->link = newnode;
+
 	return head;
 	
 
@@ -90,23 +102,29 @@ node* AnyPos(int val, int pos, node* head )
 
 node* DelFromEnd(node* head)
 {
+// in case of empty list
 	if(head == NULL)
 	{
 		cout<<"List is empty"<<endl;
 		return head;
 	}
-	node* temp = head;
 
+
+	node* temp = head;
+// find address of second last node
 	while(temp->link->link!= NULL)
 		temp = temp->link;
-	
+
+// link last second address to null	
 	temp->link = NULL;
+// delete last node
 	temp = temp->link;
 	delete(temp);
 	return head;
 	
 }
 
+// delete from any position
 node* DelFromAny(node* head, int id)
 {
 	node* temp = head;
@@ -115,13 +133,16 @@ node* DelFromAny(node* head, int id)
 		cout<<"List is empty"<<endl;
 		return head;
 	}
+
+// from beginning
 	if(id == 1)
 	{
-		head = temp->link;
-		delete(temp);
+		head = temp->link; //move head to next node
+		delete(temp);      //delete prev node
 		return head;
 	}
 	
+// just liking adding nth position
 	for(int i=0; i<id-2; i++)
 	{
 		temp = temp->link;

@@ -46,13 +46,13 @@ void search(int val, BstNode* temp)
 	if(temp == NULL)                                  // just like insertion 
 	{
 		cout<<"data: "<<val<<" NOT found"<<endl;
-		return;	
+		return ;	
 	}
 
 	if(val == temp->data)
 	{
 		cout<<"data: "<<val<<" found"<<endl;
-		return;
+		return ;
 	}
 	else if(val > temp->data)
 		return search(val, temp->right);
@@ -61,6 +61,75 @@ void search(int val, BstNode* temp)
 
 }
 
+BstNode* find_min(BstNode* root)
+{
+	while(root->left != NULL)
+	{
+		root = root->left;
+	}
+	return root;	
+}
+
+
+BstNode* delete_node(BstNode* root, int val)
+{
+	if(root == NULL)
+	{
+		cout<<"empty BST"<<endl;
+		return root;
+	}
+
+	else if(val < root->data)
+		root->left = delete_node(root->left, val);         // search for node
+
+	else if(val > root->data)
+		root->right = delete_node(root->right, val); // search for node
+
+	else
+	{
+		// case 1    if found node has no child
+		
+		if(root->left == NULL && root->right == NULL)
+		{
+			delete root;
+			root = NULL;
+			return root;	
+		}		
+
+		// case 2
+
+		else if(root->left == NULL)   // if found has only one child in this case only right child
+		{
+			BstNode* temp = root;     // connect its right node to current node
+			root = root->right;
+			delete temp;
+			return root; 
+		}
+
+		else if(root->right == NULL)     // if found has only one child in this case only left child
+		{
+			BstNode* temp = root;  // connect its left node to current node
+			root = root->left;
+			delete temp;
+			return root; 
+		}
+
+		// case 3      // if current node has both child
+
+		else
+		{
+			BstNode* temp = find_min(root->right);       // find min of current right sub_tree
+			root->data = temp->data;           // insert that min to current node  ,as min will be found in leaf
+			root->right = delete_node(root->right, temp->data);  // delete that duplicate node beacuse it will be leaf
+			return root;	
+		}
+	}
+} 
+
+
+
+
+
 
 int main()
 {
@@ -68,7 +137,7 @@ int main()
 	BstNode* root = NULL;
 	while(1)
 	{
-		cout<<"to insert press: 1 "<<endl<<"to search press: 2"<<endl<<"to exit press: 3"<<endl;
+		cout<<"to insert press: 1 "<<endl<<"to search press: 2"<<endl<<"to exit press: 3"<<endl<<"to delete press: 4"<<endl;
 		cin>>inp;
 		switch(inp)
 		{
@@ -89,6 +158,14 @@ int main()
 
 
 			case 3: exit(1);
+
+			case 4: cout<<"enter data that you want to delete"<<endl;
+					int d;
+					cin>>d;
+					root = delete_node(root, d);
+					print(root);
+					cout<<endl;
+					break;	
 
 			default: cout<<"wrong input"<<endl;
 					 break;		

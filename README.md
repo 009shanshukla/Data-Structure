@@ -44,5 +44,15 @@ Description of folders are as following:
 				e) Check if binary tree is BST or not(alternate method)
 
 				f) find inorder successor of a node in BST
+
+5) Sorting Algorithm:	a) selection sort
+
+						b) bubble sort
+
+						c) insertion sort
+
+						d) merge sort
+
+						e) quick sort
 		
 		 

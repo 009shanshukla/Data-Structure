@@ -4,7 +4,8 @@ This repository contains all data Structure related programs related in C/C++.
 
 Description of folders are as following:
 
-1) Linked List: 
+1) Linked List:
+ 
 				a) implementation of linked list (insertion, deletion, print)
 				                                       
 				b) implementation of doublylinked list (insertion, deletion, print)
@@ -17,6 +18,7 @@ Description of folders are as following:
 
 
 2) Stack: 	
+
 			a) implementation using array	
 		                
 			b) implementation using linked list
@@ -28,11 +30,13 @@ Description of folders are as following:
 			e) reverse string using stack
 
 3) Queue:	
+
 			a) implementation using array
 
 			b) implementation using linked list
 
 4) Binary Tree: 
+
 				a) Binary Search Tree implementation 
 
 				b) calculate height of binary tree
@@ -50,6 +54,7 @@ Description of folders are as following:
 				f) find inorder successor of a node in BST
 
 5) Sorting Algorithm:	
+
 						a) selection sort
 
 						b) bubble sort

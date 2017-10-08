@@ -4,6 +4,12 @@ This repository contains all data Structure related programs related in C/C++.
 
 Description of folders are as following:
 
+1) Array:
+
+			a) print matrix in spiral order
+
+
+
 1) Linked List:
  
 				a) implementation of linked list (insertion, deletion, print)
@@ -15,6 +21,10 @@ Description of folders are as following:
 				d) reverse linked list using iterative method
 
 				e) reverse linked list using recursive method
+
+				f) merge point in two linked list
+
+				g) merge point in two linked list (alternate)
 
 
 2) Stack: 	
@@ -52,6 +62,12 @@ Description of folders are as following:
 				e) Check if binary tree is BST or not(alternate method)
 
 				f) find inorder successor of a node in BST
+
+				g) find number of occurence in sorted array
+
+				h) find number of times rotation happened in sorted array
+
+				i) search an element in circular BST
 
 5) Sorting Algorithm:	
 

@@ -3,7 +3,7 @@ using namespace std;
 
 int partition(int* arr, int start, int end)
 {
-	int pivot = arr[end];    // assume last index as pivot
+	int pivot = arr[end];    // assume last index as pivot , you can choose randomly pivot b/w start to end and it will reduce worst case complexity
 	int p_index = start;      // now start from starting of partion index 
 	int temp; 
 	

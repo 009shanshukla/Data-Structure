@@ -8,6 +8,8 @@ Description of folders are as following:
 
 			a) print matrix in spiral order
 
+			b) KADANE's ALGO (maximum of subarray in an array)
+
 
 
 1) Linked List:

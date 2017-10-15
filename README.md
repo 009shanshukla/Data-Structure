@@ -4,7 +4,22 @@ This repository contains all data Structure related programs related in C/C++.
 
 Description of folders are as following:
 
-1) Array:
+1) Maths:
+			a) decimal to binary conversion
+		
+			b) factors of a number
+
+			c) prime factors of a number
+
+			d) sieve method to find all prime numbers between two numbers
+
+			e) euclid methon to find gcd of two numbers
+
+			f) area of polygon
+
+			g) direction of a point with respect to line segment
+
+2) Array:
 
 			a) print matrix in spiral order
 
@@ -12,7 +27,7 @@ Description of folders are as following:
 
 
 
-1) Linked List:
+3) Linked List:
  
 				a) implementation of linked list (insertion, deletion, print)
 				                                       
@@ -29,7 +44,7 @@ Description of folders are as following:
 				g) merge point in two linked list (alternate)
 
 
-2) Stack: 	
+4) Stack: 	
 
 			a) implementation using array	
 		                
@@ -47,7 +62,7 @@ Description of folders are as following:
 
 			b) implementation using linked list
 
-4) Binary Tree: 
+5) Binary Tree: 
 
 				a) Binary Search Tree implementation 
 
@@ -71,7 +86,7 @@ Description of folders are as following:
 
 				i) search an element in circular BST
 
-5) Sorting Algorithm:	
+6) Sorting Algorithm:	
 
 						a) selection sort
 

@@ -5,6 +5,7 @@ This repository contains all data Structure related programs related in C/C++.
 Description of folders are as following:
 
 1) Maths:
+
 			a) decimal to binary conversion
 		
 			b) factors of a number

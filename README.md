@@ -4,7 +4,7 @@ This repository contains all data Structure related programs related in C/C++.
 
 Description of folders are as following:
 
-1) Maths:
+1) Maths and Recursion:
 
 			a) decimal to binary conversion
 		

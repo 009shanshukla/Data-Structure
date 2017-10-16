@@ -19,6 +19,12 @@ Description of folders are as following:
 
 			g) direction of a point with respect to line segment
 
+			h) recursion memoization of fibonacci series
+
+			i) power of a number
+
+			j) modular exponentiation
+
 2) Array:
 
 			a) print matrix in spiral order

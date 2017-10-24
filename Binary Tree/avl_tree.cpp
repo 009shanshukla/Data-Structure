@@ -118,7 +118,7 @@ node* insert(int data, node* root)
 // get balanced
 //	cout<<"getting balance...  ";
 	int balance = get_balance(root);   // check for current node
-	cout<<balance<<endl;
+//	cout<<balance<<endl;
 
 // for left subtree insertion
 
@@ -171,13 +171,120 @@ node* insert(int data, node* root)
 
 }
 
+node* minimum(node* root)
+{
+	node* temp = root;	
+	while(temp->left != NULL)
+		temp = temp->left;
+	return temp; 
+}
+
+// deltetion of a node
+
+node* delete_node(node* root, int data)
+{
+	if(root == NULL)
+	{
+		cout<<"node is not found"<<endl;
+		return root;
+	}
+	if(root->data < data)
+	{	
+		root->right = delete_node(root->right, data);
+	}
+	else if(root->data > data)
+	{
+		root->left = delete_node(root->left, data);
+	}
+	else
+	{
+		// this node has to be deleted
+	// case 1: leaf node
+		if(root->left == NULL && root->right == NULL)
+		{
+			delete root;
+			root = NULL;
+			return root;			 
+		} 
+	// only one child
+		else if(root->left == NULL)
+		{
+			node* temp = root;
+			root = root->right;
+			delete temp;
+			return root;
+		}
+		else if(root->right == NULL)
+		{
+			node* temp = root;
+			root = root->left;
+			delete temp;
+			return root;
+		}
+	// case 3: both child
+		else
+		{
+			node* temp = minimum(root->right);
+			root->data = temp->data;
+			root->right = delete_node(root->right, temp->data);
+			return root;
+		}		
+	}
+
+	if(root == NULL)
+		return root;
+
+// height update
+		
+	root->height = 1 + maxx(height(root->left), height(root->right));
+
+// get balanced
+	int balance = get_balance(root);
+
+	// left rotation
+
+	if(balance > 1)
+	{
+		if(get_balance(root->left) >= 0)
+			return right_rotate(root);
+
+		else
+		{
+			root->left = left_rotate(root->left);
+			return right_rotate(root);
+		}
+	}
+
+// right rotation	
+
+	else
+	{
+		if(get_balance(root->right) <= 0)
+			return left_rotate(root);
+	
+		else
+		{
+			root->right = right_rotate(root->right);
+			return left_rotate(root);
+		}
+	}		
+	return root;
+
+}
+
+
+
+
+
+
+
 int main()
 {
 	node* root = NULL;
 	int inp, data;
 	while(1)
 	{
-		cout<<"1. to insert press 1: "<<endl<<"2. to print press 2: "<<endl<<"3. to exit press 3: "<<endl;
+		cout<<"1. to insert press 1: "<<endl<<"2. to print press 2: "<<endl<<"3. to delete node press 3: "<<endl<<"4. to exit press 4: "<<endl;
 		cin>>inp;
 	//	inp = 1;
 		switch(inp)
@@ -195,7 +302,12 @@ int main()
 					cout<<endl;
 					break;	
 
-			case 3:	exit(1);
+			case 3: cout<<"enter node to delete: ";
+					cin>>data;
+					root = delete_node(root, data);
+					break;
+
+			case 4:	exit(1);
 	
 			default: cout<<"wrong input"<<endl;	
 					break;

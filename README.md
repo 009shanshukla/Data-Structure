@@ -93,6 +93,8 @@ Description of folders are as following:
 
 				i) search an element in circular BST
 
+				j) AVL tree - i) insertion, ii) deletion
+
 7) HASH TABLE:
 		
 				adding, removing, searching in hash table (open hashing)

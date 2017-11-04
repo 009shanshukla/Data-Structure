@@ -113,5 +113,7 @@ Description of folders are as following:
 						d) merge sort
 
 						e) quick sort
+
+						f) heap sort
 		
 		 

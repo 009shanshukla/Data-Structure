@@ -95,6 +95,8 @@ Description of folders are as following:
 
 				j) AVL tree - i) insertion, ii) deletion
 
+				k) heap binary tree - i) insertion, ii) deletion 
+
 7) HASH TABLE:
 		
 				adding, removing, searching in hash table (open hashing)

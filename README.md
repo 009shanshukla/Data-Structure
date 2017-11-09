@@ -115,5 +115,7 @@ Description of folders are as following:
 						e) quick sort
 
 						f) heap sort
+
+						g) counting sort
 		
 		 

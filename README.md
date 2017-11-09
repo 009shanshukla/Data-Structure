@@ -120,6 +120,8 @@ Description of folders are as following:
 
 7) Graphs:
 
-			a) adjacency matrix	
+			a) adjacency matrix
+
+			b) adjacency list	
 		
 		 

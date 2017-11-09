@@ -5,13 +5,14 @@ struct graph
 {
 	int vertices;
 	int edges;
-	int **matrix;
+	int **matrix;  //2d matrix
 };
 
+// creating adjacency matrix
 struct graph* enter_matrix(void)
 {
 	int u, v;
-	struct graph* G = (struct graph*)calloc(1, sizeof(struct graph));
+	struct graph* G = (struct graph*)calloc(1, sizeof(struct graph));          // object to create a graph
 
 	cout<<"enter number of vertices: ";
 	cin>>G->vertices;
@@ -19,6 +20,7 @@ struct graph* enter_matrix(void)
 	cout<<"enter number of edges: ";
 	cin>>G->edges;	
 
+// creating 2d matrix
 	G->matrix = (int** )calloc((G->vertices),sizeof(int*));
 
 	for(int u = 0; u < G->vertices; u++)
@@ -29,6 +31,7 @@ struct graph* enter_matrix(void)
 	cout<<"enter edges (u, v): ";
 	for(int i = 0; i < G->edges; i++)
 	{
+	// for undirected graph
 		cin>>u>>v;
 		G->matrix[u][v] = 1;
 		G->matrix[v][u] = 1;
@@ -39,7 +42,7 @@ struct graph* enter_matrix(void)
 
 void print(struct graph* G)
 {
-	cout<<"for direct graph: "<<endl;
+	cout<<"for undirect graph: "<<endl;
 	cout<<"total edges: "<<G->edges<<endl<<"total vertices: "<<G->vertices<<endl;
 	for(int i = 0; i < G->vertices; i++)
 	{

@@ -117,5 +117,9 @@ Description of folders are as following:
 						f) heap sort
 
 						g) counting sort
+
+7) Graphs:
+
+			a) adjacency matrix	
 		
 		 

@@ -122,6 +122,8 @@ Description of folders are as following:
 
 			a) adjacency matrix
 
-			b) adjacency list	
+			b) adjacency list
+
+			c) floyd warshall algorithm	
 		
 		 

@@ -124,6 +124,8 @@ Description of folders are as following:
 
 			b) adjacency list
 
-			c) floyd warshall algorithm	
+			c) floyd warshall algorithm
+
+			d) BFS in graph	
 		
 		 

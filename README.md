@@ -127,5 +127,7 @@ Description of folders are as following:
 			c) floyd warshall algorithm
 
 			d) BFS in graph	
+
+			e) DFS in graph
 		
 		 

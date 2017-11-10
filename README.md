@@ -129,5 +129,7 @@ Description of folders are as following:
 			d) BFS in graph	
 
 			e) DFS in graph
+
+			f) kruskal algorithm for minimum spanning tree
 		
 		 

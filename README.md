@@ -124,12 +124,14 @@ Description of folders are as following:
 
 			b) adjacency list
 
-			c) floyd warshall algorithm
+			c) floyd warshall algorithm  for shortest path
 
 			d) BFS in graph	
 
 			e) DFS in graph
 
 			f) kruskal algorithm for minimum spanning tree
+
+			g) Prims algorith for minimum spanning tree
 		
 		 
